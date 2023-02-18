@@ -5,4 +5,10 @@
   letter-spacing: 0.05em;
   color: white;
   background: transparent;
+  transition: all .3s ease;
+
+  &:hover {
+    color: #3765DE;
+    transform: scale(1.2);
+  }
 }
