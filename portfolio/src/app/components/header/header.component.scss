@@ -1,3 +1,18 @@
+.header {
+  position: fixed;
+  top: 0;
+  transition: all .5s ease;
+  padding: 1rem;
+  z-index: 10;
+  width: 90%;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .header__logo {
   position: relative;
 }
