@@ -6,14 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/header/navbar/navbar.component';
-import { AboutComponent } from './components/about/about.component';
+import { AboutComponent } from './pages/main/about/about.component';
+import { WorksComponent } from './pages/main/works/works.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavbarComponent,
-    AboutComponent
+    AboutComponent,
+    WorksComponent,
   ],
   imports: [
     BrowserModule,
