@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/header/navbar/navbar.component';
 import { AboutComponent } from './pages/main/about/about.component';
 import { WorksComponent } from './pages/main/works/works.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     NavbarComponent,
     AboutComponent,
     WorksComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
