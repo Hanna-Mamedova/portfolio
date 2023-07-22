@@ -1,3 +1,13 @@
-<section class="">
-  <p>works works!</p>
+<section class="works">
+  <div class="content">
+    <div class="content__container">
+      <h2>Projects</h2>
+      <mat-grid-list [cols]="column" rowHeight="30rem">
+        <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+          [style.background]="backgroundColor">
+            <img class="work-image" [src]="tile.backgroundImage" alt="">
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
 </section>

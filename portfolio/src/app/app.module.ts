@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/header/navbar/navbar.component';
 import { AboutComponent } from './pages/main/about/about.component';
 import { WorksComponent } from './pages/main/works/works.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { WorksComponent } from './pages/main/works/works.component';
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
