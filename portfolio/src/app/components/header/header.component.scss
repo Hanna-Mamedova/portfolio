@@ -1,8 +1,15 @@
 .header {
-  // position: fixed;
+  position: fixed;
   top: 0;
-  transition: all .5s ease;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
   z-index: 10;
+}
+
+.header.scrolled {
+  background: linear-gradient(169deg, rgba(0, 41, 255, 0.50) 0%, rgba(0, 41, 255, 0.00) 100%), linear-gradient(187deg, rgba(176, 0, 191, 0.70) 0%, rgba(176, 0, 191, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), linear-gradient(185deg, rgba(166, 0, 181, 0.30) 0%, rgba(0, 0, 0, 0.00) 100%), rgba(24, 129, 235, 0.20);
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.15);
 }
 
 .header__wrapper {
@@ -12,5 +19,3 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
-

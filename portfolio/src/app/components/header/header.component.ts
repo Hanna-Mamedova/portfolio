@@ -1,16 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   logoColor = '#9967BD';
+  logoColorScroll = '#FFFF'
 
-  constructor() { }
+  isScrolled = false;
 
-  ngOnInit(): void {
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (number > 100) {
+      this.isScrolled = true;
+    } else if (this.isScrolled && number < 10) {
+      this.isScrolled = false;
+    }
   }
 
 }
