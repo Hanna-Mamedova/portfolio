@@ -10,6 +10,7 @@ import { AboutComponent } from './pages/main/about/about.component';
 import { WorksComponent } from './pages/main/works/works.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FooterComponent } from './components/footer/footer.component';
+import { LogoComponent } from './components/logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutComponent,
     WorksComponent,
     FooterComponent,
+    LogoComponent,
   ],
   imports: [
     BrowserModule,
