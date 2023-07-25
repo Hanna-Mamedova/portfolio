@@ -1,0 +1,10 @@
+:host {
+  padding-top: 4px;
+  transition: all .5s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+

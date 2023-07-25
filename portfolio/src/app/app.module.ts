@@ -11,6 +11,8 @@ import { WorksComponent } from './pages/main/works/works.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/logo/logo.component';
+import { LinkedinComponent } from './components/svg/linkedin/linkedin.component';
+import { GithubComponent } from './components/svg/github/github.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { LogoComponent } from './components/logo/logo.component';
     WorksComponent,
     FooterComponent,
     LogoComponent,
+    LinkedinComponent,
+    GithubComponent,
   ],
   imports: [
     BrowserModule,
