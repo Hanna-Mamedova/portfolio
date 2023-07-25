@@ -9,10 +9,13 @@ import { NavbarComponent } from './components/header/navbar/navbar.component';
 import { AboutComponent } from './pages/main/about/about.component';
 import { WorksComponent } from './pages/main/works/works.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { LinkedinComponent } from './components/svg/linkedin/linkedin.component';
 import { GithubComponent } from './components/svg/github/github.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -28,9 +31,11 @@ import { GithubComponent } from './components/svg/github/github.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MatButtonModule,
     MatGridListModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,11 +1,17 @@
-.work-image {
+.work__link {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-}
 
-.work-image:hover {
-  transform: scale(1.05);
+  &-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
 }
