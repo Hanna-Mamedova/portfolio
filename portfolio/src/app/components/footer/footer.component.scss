@@ -1,0 +1,24 @@
+.footer {
+  background: linear-gradient(180deg, rgba(158, 86, 198, 0.30) 0%, rgba(158, 86, 198, 0.00) 100%), rgba(1, 126, 255, 0.60);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: #FFFF;
+}
+
+.footer__links {
+  display: flex;
+  gap: 1.5rem;
+}
