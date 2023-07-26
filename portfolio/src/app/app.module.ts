@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/header/navbar/navbar.component';
 import { AboutComponent } from './pages/main/about/about.component';
-import { WorksComponent } from './pages/main/works/works.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
@@ -18,6 +17,7 @@ import { GithubComponent } from './components/svg/github/github.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './pages/main/main.component';
 import { ProjectComponent } from './pages/project/project.component';
+import { ProjectsComponent } from './pages/main/projects/projects.component';
 
 
 @NgModule({
@@ -26,7 +26,7 @@ import { ProjectComponent } from './pages/project/project.component';
     HeaderComponent,
     NavbarComponent,
     AboutComponent,
-    WorksComponent,
+    ProjectsComponent,
     FooterComponent,
     LogoComponent,
     LinkedinComponent,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Color } from 'src/app/utils/helpers';
 
 enum Position {
   above = "above",
@@ -15,11 +16,11 @@ export interface Tile {
 }
 
 @Component({
-  selector: 'app-works',
-  templateUrl: './works.component.html',
-  styleUrls: ['./works.component.scss']
+  selector: 'app-projects',
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.scss']
 })
-export class WorksComponent implements OnInit {
+export class ProjectsComponent implements OnInit {
   tiles: Tile[] = [
     {text: 'Task Manager', cols: 5, rows: 1, color: 'lightblue', backgroundImage: "/assets/project management.png", position: Position.above},
     {text: 'Finscraper', cols: 3, rows: 1, color: 'lightgreen', backgroundImage: "/assets/finscraper.png", position: Position.above},
@@ -28,7 +29,7 @@ export class WorksComponent implements OnInit {
   ];
 
   column = 8
-  backgroundColor = '#F2F2FF'
+  backgroundColor = Color.secondary
   toolTipDelay = 10000
 
   constructor() { }
