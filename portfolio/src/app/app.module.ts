@@ -16,6 +16,7 @@ import { LinkedinComponent } from './components/svg/linkedin/linkedin.component'
 import { GithubComponent } from './components/svg/github/github.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './pages/main/main.component';
+import { ProjectComponent } from './pages/project/project.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { MainComponent } from './pages/main/main.component';
     LinkedinComponent,
     GithubComponent,
     MainComponent,
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,
