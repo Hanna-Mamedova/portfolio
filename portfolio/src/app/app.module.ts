@@ -10,6 +10,7 @@ import { AboutComponent } from './pages/main/about/about.component';
 import { WorksComponent } from './pages/main/works/works.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatCardModule } from '@angular/material/card';
 import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { LinkedinComponent } from './components/svg/linkedin/linkedin.component';
@@ -40,6 +41,7 @@ import { ProjectComponent } from './pages/project/project.component';
     MatButtonModule,
     MatGridListModule,
     MatTooltipModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
