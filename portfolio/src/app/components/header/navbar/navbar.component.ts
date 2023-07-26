@@ -1,4 +1,6 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,4 +10,11 @@ import { Component, Input } from '@angular/core';
 export class NavbarComponent {
   @Input() color: string
 
+  constructor(private router: Router, private viewportScroller: ViewportScroller) { }
+
+  redirectTo(anchor: string) {
+    this.router.navigateByUrl('/main').then(() => {
+      this.viewportScroller.scrollToAnchor(anchor);
+    });
+  }
 }
