@@ -1,4 +1,8 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subscription, filter, of, switchMap } from 'rxjs';
+import { ScrollService } from 'src/app/services/scroll.service';
+import { Color } from 'src/app/utils/helpers';
 
 @Component({
   selector: 'app-header',
@@ -6,19 +10,34 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  logoColor = '#9967BD';
-  logoColorScroll = '#FFFF'
+  logoColor: string = Color.primary
+  navBarColor: string = Color.white
+  isScrolled: boolean
+  currentRoute: string
 
-  isScrolled = false;
+  private subscription: Subscription;
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (number > 100) {
-      this.isScrolled = true;
-    } else if (this.isScrolled && number < 10) {
-      this.isScrolled = false;
-    }
+  constructor(private router: Router, private scrollService: ScrollService) {}
+
+  ngOnInit() {
+    this.subscription = this.router.events.pipe(
+      filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+      switchMap((event: NavigationEnd) => {
+        this.currentRoute = event.url;
+        return this.scrollService.isScrolled;
+      })
+    ).subscribe(isScrolled => {
+      this.isScrolled = isScrolled;
+      this.logoColor = isScrolled ? Color.white : Color.primary;
+      if ( this.currentRoute === '/project') {
+        this.navBarColor = isScrolled ? Color.white : Color.primary;
+      }
+    });
   }
 
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+  }
 }
