@@ -30,10 +30,4 @@ export class WorksComponent implements OnInit {
   column = 8
   backgroundColor = '#F2F2FF'
   toolTipDelay = 10000
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
