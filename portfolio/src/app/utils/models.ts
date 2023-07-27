@@ -1,10 +1,10 @@
 import { Position } from "./helpers";
 
 export interface Project {
-  color: string;
+  id: number;
   cols: number;
   rows: number;
-  text: string;
+  tooltip: string;
   backgroundImage: string;
   position: Position;
 }

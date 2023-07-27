@@ -6,8 +6,8 @@
         <mat-grid-tile *ngFor="let project of projects" [colspan]="project.cols" [rowspan]="project.rows"
           [style.background]="backgroundColor">
           <a class="work__link">
-            <img class="work__link-image" [src]="project.backgroundImage" [alt]="project.text" #tooltip="matTooltip"
-              [matTooltip]="project.text" [matTooltipPosition]="project.position">
+            <img class="work__link-image" [src]="project.backgroundImage" [alt]="project.tooltip" #tooltip="matTooltip"
+              [matTooltip]="project.tooltip" [matTooltipPosition]="project.position">
           </a>
         </mat-grid-tile>
       </mat-grid-list>
