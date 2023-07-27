@@ -1,19 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Color } from 'src/app/utils/helpers';
-
-enum Position {
-  above = "above",
-  below = "below",
-}
-
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
-  backgroundImage: string;
-  position: Position;
-}
+import { Color, Position } from 'src/app/utils/helpers';
+import { Project } from 'src/app/utils/models';
 
 @Component({
   selector: 'app-projects',
@@ -21,7 +8,7 @@ export interface Tile {
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  tiles: Tile[] = [
+  projects: Project[] = [
     {text: 'Task Manager', cols: 5, rows: 1, color: 'lightblue', backgroundImage: "/assets/project management.png", position: Position.above},
     {text: 'Finscraper', cols: 3, rows: 1, color: 'lightgreen', backgroundImage: "/assets/finscraper.png", position: Position.above},
     {text: 'GraphQL Playground', cols: 3, rows: 1, color: 'lightpink', backgroundImage: "/assets/graphql.png", position: Position.below},
