@@ -5,6 +5,9 @@
   ],
   "overrides": [
     {
+      "plugins": [
+        "import"
+      ],
       "files": [
         "*.ts"
       ],
@@ -17,8 +20,8 @@
       "extends": [
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates",
-        "plugin:import/recommended",
-        "airbnb-typescript/base"
+        "airbnb-typescript/base",
+        "prettier"
       ],
       "rules": {
         "@angular-eslint/directive-selector": [
@@ -36,7 +39,9 @@
             "prefix": "app",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "@typescript-eslint/lines-between-class-members": "off",
+        "class-methods-use-this": "off"
       }
     },
     {
@@ -47,14 +52,6 @@
         "plugin:@angular-eslint/template/recommended"
       ],
       "rules": {}
-    },
-    {
-      "files": [
-        "*.ts"
-      ],
-      "extends": [
-        "plugin:@ngrx/recommended"
-      ]
     }
   ]
 }
