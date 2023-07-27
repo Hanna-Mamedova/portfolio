@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Color, Position } from 'src/app/utils/helpers';
 import { Project } from 'src/app/utils/models';
 
@@ -7,7 +7,7 @@ import { Project } from 'src/app/utils/models';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent {
   projects: Project[] = [
     {text: 'Task Manager', cols: 5, rows: 1, color: 'lightblue', backgroundImage: "/assets/project management.png", position: Position.above},
     {text: 'Finscraper', cols: 3, rows: 1, color: 'lightgreen', backgroundImage: "/assets/finscraper.png", position: Position.above},
