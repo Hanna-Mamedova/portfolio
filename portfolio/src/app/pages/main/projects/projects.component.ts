@@ -18,10 +18,4 @@ export class ProjectsComponent implements OnInit {
   column = 8
   backgroundColor = Color.secondary
   toolTipDelay = 10000
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
