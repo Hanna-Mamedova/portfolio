@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     ).subscribe(isScrolled => {
       this.isScrolled = isScrolled;
       this.logoColor = isScrolled ? Color.white : Color.primary;
-      if ( this.currentRoute.includes('/project')) {
+      if ( !this.currentRoute.includes('/main')) {
         this.navBarColor = isScrolled ? Color.white : Color.primary;
       }
     });
