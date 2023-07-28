@@ -1,37 +1,26 @@
 <section class="project">
   <div class="content">
-    <div class="content__container">
+    <div class="content__container" *ngIf="currentProject">
       <mat-card class="project__wrapper">
         <mat-card-header>
-          <mat-card-title>Project Title</mat-card-title>
+          <mat-card-title>{{ currentProject.name }}</mat-card-title>
         </mat-card-header>
-        <img mat-card-image src="assets/project management.png" alt="Project Image">
+        <img mat-card-image [src]="currentProject.image" alt="Project Image">
         <mat-card-content>
-          <p><b>Description</b></p>
-          <p>An agile project management tool designed to help visualize work, limit work-in-progress, and maximize efficiency (or flow).
-            Based on Kanban boards visualization.</p>
-          <p><b>Deploy</b><a href="https://rs-project-management-app-team111.netlify.app/home"> Link</a></p>
-          <p><b>Team</b> 3 developers under mentor's supervision</p>
+          <b>Description</b>
+          <p>{{ currentProject.description }}</p>
           <div>
-            <b>Technologies</b>
-            <div>
-              <b>Core</b>
-              <ul>
-                <li>Angular</li>
-                <li>TypeScript</li>
-                <li>RxJS</li>
-                <li>NgRx</li>
-                <li>ESLint</li>
-              </ul>
-              <b>Styling</b>
-              <ul>
-                <li>Angular Material</li>
-              </ul>
-              <b>Plugins</b>
-              <ul>
-                <li>ng-http-loader</li>
-                <li>swiper</li>
-              </ul>
+            <b>Deploy</b>
+            <a [href]="currentProject.deployLink"> {{ currentProject.deployLink }}</a>
+          </div>
+          <div>
+            <b>Team </b> <span>{{ currentProject.team }}</span>
+          </div>
+          <div>
+            <h4>Technologies</h4>
+            <div *ngFor="let title of technologyHeadings">
+              <b>{{ title | uppercase }} </b>
+              <span *ngFor="let item of currentProject.technologies[title]">{{ item }} </span>
             </div>
           </div>
         </mat-card-content>

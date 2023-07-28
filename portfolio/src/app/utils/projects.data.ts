@@ -1,5 +1,5 @@
 import { Position } from "./helpers";
-import { Project } from "./models";
+import { Project, ProjectInfo } from "./models";
 
 export const projects: Project[] = [
   {id: 5, tooltip: 'Trypple A', cols: 5, rows: 1, backgroundImage: "/assets/Trypple A.png", position: Position.below},
@@ -9,7 +9,7 @@ export const projects: Project[] = [
   {id: 1, tooltip: 'Task Manager', cols: 8, rows: 1, backgroundImage: "/assets/project management.png", position: Position.above},
 ];
 
-export const projectsInfo = [
+export const projectsInfo: ProjectInfo[] = [
   {
     id: 1,
     name: 'Task Manager',
@@ -72,7 +72,7 @@ export const projectsInfo = [
     deployLink: 'https://management-system-09d549.netlify.app/',
     team: 'product owner, frontend, tester',
     technologies: {
-      core: ['Wix', 'Botpress', 'ESLint', 'Webpack', 'Figma'],
+      core: ['Wix', 'Botpress'],
     },
     personalImpact: ['content maker', 'project design', 'landing page implementation', 'chatbot intergration'],
   },
