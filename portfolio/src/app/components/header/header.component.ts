@@ -29,7 +29,7 @@ export class HeaderComponent {
     ).subscribe(isScrolled => {
       this.isScrolled = isScrolled;
       this.logoColor = isScrolled ? Color.white : Color.primary;
-      if ( this.currentRoute === '/project') {
+      if ( this.currentRoute.includes('/project')) {
         this.navBarColor = isScrolled ? Color.white : Color.primary;
       }
     });

@@ -5,10 +5,10 @@
       <mat-grid-list [cols]="column" rowHeight="30rem" [gutterSize]="'10px'">
         <mat-grid-tile *ngFor="let project of projects" [colspan]="project.cols" [rowspan]="project.rows"
           [style.background]="backgroundColor">
-          <a class="work__link">
+          <div class="work__link" (click)="showProjectInfo(project.id)">
             <img class="work__link-image" [src]="project.backgroundImage" [alt]="project.tooltip" #tooltip="matTooltip"
               [matTooltip]="project.tooltip" [matTooltipPosition]="project.position">
-          </a>
+          </div>
         </mat-grid-tile>
       </mat-grid-list>
     </div>
