@@ -1,5 +1,5 @@
 <nav>
-  <button class="nav-item" mat-flat-button>About me</button>
-  <button class="nav-item" mat-flat-button>Projects</button>
-  <button class="nav-item" mat-flat-button>Contacts</button>
+  <button [ngStyle]="{'color': color}" class="nav-item" mat-flat-button>About me</button>
+  <button [ngStyle]="{'color': color}" class="nav-item" (click)="redirectTo('projects')" mat-flat-button>Projects</button>
+  <button [ngStyle]="{'color': color}" class="nav-item" mat-flat-button>Contacts</button>
 </nav>

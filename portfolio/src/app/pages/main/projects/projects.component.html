@@ -1,0 +1,16 @@
+<section id="projects" class="works">
+  <div class="content">
+    <div class="content__container">
+      <h2>Projects</h2>
+      <mat-grid-list [cols]="column" rowHeight="30rem" [gutterSize]="'10px'">
+        <mat-grid-tile *ngFor="let project of projects" [colspan]="project.cols" [rowspan]="project.rows"
+          [style.background]="backgroundColor">
+          <div class="work__link" (click)="showProjectInfo(project.id)">
+            <img class="work__link-image" [src]="project.backgroundImage" [alt]="project.tooltip" #tooltip="matTooltip"
+              [matTooltip]="project.tooltip" [matTooltipPosition]="project.position">
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+</section>

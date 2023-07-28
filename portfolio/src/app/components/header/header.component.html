@@ -1,9 +1,9 @@
 <header class="header" [ngClass]="{ 'scrolled': isScrolled }">
   <div class="content">
     <div class="header__wrapper">
-      <app-logo [color]="isScrolled ? logoColorScroll : logoColor"></app-logo>
+      <app-logo [color]="logoColor"></app-logo>
       <div class="header__navbar">
-        <app-navbar></app-navbar>
+        <app-navbar [color]="navBarColor"></app-navbar>
       </div>
     </div>
   </div>

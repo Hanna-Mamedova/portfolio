@@ -1,0 +1,30 @@
+<section class="project">
+  <div class="content">
+    <div class="content__container" *ngIf="currentProject">
+      <mat-card class="project__wrapper">
+        <mat-card-header>
+          <mat-card-title>{{ currentProject.name }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="currentProject.image" alt="Project Image">
+        <mat-card-content>
+          <b>Description</b>
+          <p>{{ currentProject.description }}</p>
+          <div>
+            <b>Deploy</b>
+            <a [href]="currentProject.deployLink"> {{ currentProject.deployLink }}</a>
+          </div>
+          <div>
+            <b>Team </b> <span>{{ currentProject.team }}</span>
+          </div>
+          <div>
+            <h4>Technologies</h4>
+            <div *ngFor="let title of technologyHeadings">
+              <b>{{ title | uppercase }} </b>
+              <span *ngFor="let item of currentProject.technologies[title]">{{ item }} </span>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>
