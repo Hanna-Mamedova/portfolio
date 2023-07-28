@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription, filter, of, switchMap } from 'rxjs';
 import { ScrollService } from 'src/app/services/scroll.service';
-import { Color } from 'src/app/utils/helpers';
+import { Color } from 'src/app/shared/helpers';
 
 @Component({
   selector: 'app-header',

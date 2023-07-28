@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Color } from 'src/app/utils/helpers';
-import { projects } from 'src/app/utils/projects.data';
+import { Color } from 'src/app/shared/helpers';
+import { projects } from 'src/app/shared/projects.data';
 
 @Component({
   selector: 'app-projects',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProjectInfo, Technologies } from 'src/app/utils/models';
-import { projectsInfo } from 'src/app/utils/projects.data';
+import { ProjectInfo, Technologies } from 'src/app/shared/models';
+import { projectsInfo } from 'src/app/shared/projects.data';
 
 @Component({
   selector: 'app-project',
