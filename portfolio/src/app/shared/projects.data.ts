@@ -6,7 +6,7 @@ export const projects: Project[] = [
   {id: 3, tooltip: 'GraphQL Playground', cols: 3, rows: 1, backgroundImage: "/assets/graphql.png", position: Position.below},
   {id: 2, tooltip: 'Finscraper', cols: 3, rows: 1, backgroundImage: "/assets/finscraper.png", position: Position.above},
   {id: 4, tooltip: 'Management System Dashboard', cols: 5, rows: 1, backgroundImage: "/assets/management system.png", position: Position.below},
-  {id: 1, tooltip: 'Task Manager', cols: 8, rows: 1, backgroundImage: "/assets/project management.png", position: Position.above},
+  {id: 1, tooltip: 'Task Manager', cols: 5, rows: 1, backgroundImage: "/assets/project management.png", position: Position.above},
 ];
 
 export const projectsInfo: ProjectInfo[] = [
