@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProjectInfo, Technologies } from 'src/app/shared/models';
+import { ProjectInfo } from 'src/app/shared/models';
 import { projectsInfo } from 'src/app/shared/projects.data';
 
 @Component({

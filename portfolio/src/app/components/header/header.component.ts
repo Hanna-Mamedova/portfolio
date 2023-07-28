@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { Subscription, filter, of, switchMap } from 'rxjs';
+import { Subscription, filter, switchMap } from 'rxjs';
 import { ScrollService } from 'src/app/services/scroll.service';
 import { Color } from 'src/app/shared/helpers';
 
@@ -9,7 +9,7 @@ import { Color } from 'src/app/shared/helpers';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit, OnDestroy {
   logoColor: string = Color.primary
   navBarColor: string = Color.white
   isScrolled: boolean
