@@ -1,0 +1,9 @@
+<mat-grid-list [cols]="column" rowHeight="30rem" [gutterSize]="'10px'">
+  <mat-grid-tile *ngFor="let project of currentProjects" [colspan]="project.cols" [rowspan]="project.rows"
+    [style.background]="backgroundColor">
+    <div class="project__link" (click)="showProjectInfo(project.id)">
+      <img class="project__link-image" [src]="project.image" [alt]="project.tooltip" #tooltip="matTooltip"
+        [matTooltip]="project.tooltip" [matTooltipPosition]="project.position">
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
