@@ -1,14 +1,18 @@
 .nav-item {
+  padding: 1rem;
   font-weight: 700;
   font-size: 1.1rem;
   line-height: 21px;
   letter-spacing: 0.05em;
-  color: white;
-  background: transparent;
+  background-color: transparent;
+  border: none;
   transition: all .5s ease;
+  cursor: pointer;
 
   &:hover {
     color: #3765DE !important;
+    background-color: transparent;
+    border: none;
     transform: scale(1.2);
   }
 }
