@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProjectInfo } from 'src/app/shared/models';
-import { projectsInfo } from 'src/app/shared/projects.data';
+import { Project } from 'src/app/shared/models';
+import { projects } from 'src/app/shared/projects.data';
 
 @Component({
   selector: 'app-project',
@@ -10,14 +10,14 @@ import { projectsInfo } from 'src/app/shared/projects.data';
 })
 export class ProjectComponent implements OnInit {
   id: string
-  currentProject: ProjectInfo
+  currentProject: Project
   technologyHeadings: string[]
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id') as string;
-    this.currentProject = projectsInfo.find(projectInfo => projectInfo.id === +this.id) as ProjectInfo;
+    this.currentProject = projects.find(projects => projects.id === +this.id) as Project;
     this.technologyHeadings = Object.keys(this.currentProject.technologies);
   }
 

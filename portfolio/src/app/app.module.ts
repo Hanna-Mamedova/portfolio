@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './pages/main/main.component';
 import { ProjectsComponent } from './pages/main/projects/projects.component';
 import { MaterialModule } from './shared/material.module';
+import { ProjectsListComponent } from './pages/main/projects/projects-list/projects-list.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { MaterialModule } from './shared/material.module';
     LinkedinComponent,
     GithubComponent,
     MainComponent,
+    ProjectsListComponent,
   ],
   imports: [
     BrowserModule,

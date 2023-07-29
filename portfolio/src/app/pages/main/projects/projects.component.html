@@ -2,15 +2,16 @@
   <div class="content">
     <div class="content__container">
       <h2>Projects</h2>
-      <mat-grid-list [cols]="column" rowHeight="30rem" [gutterSize]="'10px'">
-        <mat-grid-tile *ngFor="let project of projects" [colspan]="project.cols" [rowspan]="project.rows"
-          [style.background]="backgroundColor">
-          <div class="work__link" (click)="showProjectInfo(project.id)">
-            <img class="work__link-image" [src]="project.backgroundImage" [alt]="project.tooltip" #tooltip="matTooltip"
-              [matTooltip]="project.tooltip" [matTooltipPosition]="project.position">
-          </div>
-        </mat-grid-tile>
-      </mat-grid-list>
+      <div class="projects__filters">
+        <mat-chip-listbox aria-label="Filters" multiple>
+          <mat-chip-option (click)="onClick()">HTML5/CSS3</mat-chip-option>
+          <mat-chip-option (click)="onClick()">Typescript</mat-chip-option>
+          <mat-chip-option (click)="onClick()">Angular 2+</mat-chip-option>
+          <mat-chip-option (click)="onClick()">React 18</mat-chip-option>
+          <mat-chip-option (click)="onClick()">Figma</mat-chip-option>
+        </mat-chip-listbox>
+      </div>
+      <app-projects-list></app-projects-list>
     </div>
   </div>
 </section>
