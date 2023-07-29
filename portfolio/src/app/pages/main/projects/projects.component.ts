@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { Color } from 'src/app/shared/helpers';
-import { projects } from 'src/app/shared/projects.data';
+import { Component, ViewChild } from '@angular/core';
+import { MatChipListbox } from '@angular/material/chips';
+import { PassChosenFiltersService } from 'src/app/services/pass-chosen-filters.service';
 
 @Component({
   selector: 'app-projects',
@@ -9,14 +8,13 @@ import { projects } from 'src/app/shared/projects.data';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
-  column = 8
-  backgroundColor = Color.secondary
+  @ViewChild(MatChipListbox) chipList: MatChipListbox;
+
   toolTipDelay = 10000
-  projects = projects;
 
-  constructor(private router: Router) {}
+  constructor(private passFiltersService: PassChosenFiltersService) {}
 
-  showProjectInfo(id: number) {
-    this.router.navigate(['/project', id]);
+  onClick() {
+    this.passFiltersService.passFilters(this.chipList.value);
   }
 }
