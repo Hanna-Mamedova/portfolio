@@ -1,9 +1,9 @@
 <mat-grid-list [cols]="column" rowHeight="30rem" [gutterSize]="'10px'">
-  <mat-grid-tile *ngFor="let project of currentProjects" [colspan]="project.cols" [rowspan]="project.rows"
+  <mat-grid-tile *ngFor="let project of currentProjects; let i = index" [colspan]="getColspan(i)" rowspan="1"
     [style.background]="backgroundColor">
     <div class="project__link" (click)="showProjectInfo(project.id)">
       <img class="project__link-image" [src]="project.image" [alt]="project.tooltip" #tooltip="matTooltip"
-        [matTooltip]="project.tooltip" [matTooltipPosition]="project.position">
+        [matTooltip]="project.tooltip">
     </div>
   </mat-grid-tile>
 </mat-grid-list>

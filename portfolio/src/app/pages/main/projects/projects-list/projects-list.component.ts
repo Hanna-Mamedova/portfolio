@@ -19,8 +19,6 @@ export class ProjectsListComponent implements OnInit {
   constructor(private router: Router, private passFiltersService: PassChosenFiltersService) {}
 
   ngOnInit() {
-    console.log(this.currentProjects);
-
     this.subscription = this.passFiltersService.currentFilters.subscribe(
       filters => {
         const filteredProjects = projects.filter(project => {
@@ -31,7 +29,11 @@ export class ProjectsListComponent implements OnInit {
     )
   }
 
-  showProjectInfo(id: number) {
+  getColspan(i: number): number {
+    return Math.floor(i / 2) % 2 === 0 ? (i % 2 === 0 ? 5 : 3) : (i % 2 === 0 ? 3 : 5);
+  }
+
+  showProjectInfo(id: number): void {
     this.router.navigate(['/project', id]);
   }
 
