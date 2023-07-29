@@ -1,22 +1,17 @@
 import { Position } from "./helpers";
 
-export interface Project {
-  id: number;
-  cols: number;
-  rows: number;
-  tooltip: string;
-  backgroundImage: string;
-  position: Position;
-}
-
 export interface Technologies {
   [index: string]: string[]
 }
 
-export interface ProjectInfo {
+export interface Project {
   id: number;
   name: string;
+  tooltip: string;
+  cols: number;
+  rows: number;
   image: string;
+  position: Position;
   description: string;
   deployLink: string;
   team: string;

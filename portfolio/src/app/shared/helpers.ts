@@ -7,4 +7,6 @@ export const Color = {
 export enum Position {
   above = "above",
   below = "below",
+  left = 'left',
+  right = 'right',
 }
