@@ -7,7 +7,7 @@ export const projects: Project[] = [
     tooltip: 'Trypple A',
     image: '/assets/Trypple A.png',
     description: 'Developers agency advertisement landing page',
-    deployLink: 'https://management-system-09d549.netlify.app/',
+    deployLink: 'https://www.trypplea.com/',
     team: 'product owner, frontend, tester',
     technologies: {
       core: ['Wix', 'Botpress'],
