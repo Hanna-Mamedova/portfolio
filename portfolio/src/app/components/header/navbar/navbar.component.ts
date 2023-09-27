@@ -1,6 +1,6 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, Input, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Color } from 'src/app/shared/helpers';
 
 @Component({
@@ -11,11 +11,18 @@ import { Color } from 'src/app/shared/helpers';
 export class NavbarComponent {
   @Input() color: string;
   logoColor: string = Color.white;
+  burgerColor: string;
 
   constructor(
     private router: Router,
     private viewportScroller: ViewportScroller,
+    private route: ActivatedRoute,
   ) {}
+
+  ngOnInit() {
+    const currentRoute = this.route.snapshot.url.join('/');
+    this.burgerColor = !currentRoute.includes('/main') ? Color.primary : Color.white;
+  }
 
   redirectTo(anchor: string) {
     this.router.navigateByUrl('/main').then(() => {

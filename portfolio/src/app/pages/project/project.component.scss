@@ -21,6 +21,10 @@
 .project__wrapper {
   max-width: 50%;
   margin: 0 auto;
+
+  @media (max-width: 800px) {
+    max-width: 100%;
+  }
 }
 
 .card-content {

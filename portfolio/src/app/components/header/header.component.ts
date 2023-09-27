@@ -7,32 +7,40 @@ import { Color } from 'src/app/shared/helpers';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  logoColor: string = Color.primary
-  navBarColor: string = Color.white
-  isScrolled: boolean
-  currentRoute: string
+  logoColor: string = Color.primary;
+  navBarColor: string = Color.white;
+  isScrolled: boolean;
+  currentRoute: string;
 
   private subscription: Subscription;
 
-  constructor(private router: Router, private scrollService: ScrollService) {}
+  constructor(
+    private router: Router,
+    private scrollService: ScrollService,
+  ) {}
 
   ngOnInit() {
-    this.subscription = this.router.events.pipe(
-      filter((event): event is NavigationEnd => event instanceof NavigationEnd),
-      switchMap((event: NavigationEnd) => {
-        this.currentRoute = event.url;
-        return this.scrollService.isScrolled;
-      })
-    ).subscribe(isScrolled => {
-      this.isScrolled = isScrolled;
-      this.logoColor = isScrolled ? Color.white : Color.primary;
-      if ( !this.currentRoute.includes('/main')) {
-        this.navBarColor = isScrolled ? Color.white : Color.primary;
-      }
-    });
+    this.subscription = this.router.events
+      .pipe(
+        filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+        switchMap((event: NavigationEnd) => {
+          this.currentRoute = event.url;
+          return this.scrollService.isScrolled;
+        }),
+      )
+      .subscribe((isScrolled) => {
+        this.isScrolled = isScrolled;
+        this.logoColor = isScrolled ? Color.white : Color.primary;
+        if (!this.currentRoute.includes('/main')) {
+          this.navBarColor = isScrolled ? Color.white : Color.primary;
+          if (window.innerWidth < 800) {
+            this.navBarColor = Color.white;
+          }
+        }
+      });
   }
 
   ngOnDestroy() {

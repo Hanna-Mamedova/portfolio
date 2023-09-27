@@ -5,12 +5,12 @@
   <button [ngStyle]="{'color': color}" class="nav-item" (click)="redirectTo('contacts')">Contacts</button>
 </nav>
 
-<button mat-icon-button [matMenuTriggerFor]="menu" class="hamburger">
+<button mat-icon-button [matMenuTriggerFor]="menu" class="hamburger" [ngStyle]="{'color': burgerColor}">
   <mat-icon>menu</mat-icon>
 </button>
 <mat-menu #menu="matMenu">
   <app-logo [color]="logoColor" class="logo"></app-logo>
-  <mat-icon class="close">close</mat-icon>
+  <mat-icon [color]="logoColor" class="close">close</mat-icon>
   <button mat-menu-item [ngStyle]="{'color': color}" class="nav-item" (click)="redirectTo('skills')">Skills</button>
   <button mat-menu-item [ngStyle]="{'color': color}" class="nav-item" (click)="redirectTo('info')">About me</button>
   <button mat-menu-item [ngStyle]="{'color': color}" class="nav-item" (click)="redirectTo('projects')">Projects</button>
