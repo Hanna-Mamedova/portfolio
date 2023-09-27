@@ -16,6 +16,7 @@ import { ProjectsComponent } from './pages/main/projects/projects.component';
 import { MaterialModule } from './shared/material.module';
 import { ProjectsListComponent } from './pages/main/projects/projects-list/projects-list.component';
 import { SkillsComponent } from './pages/main/skills/skills.component';
+import { InfoComponent } from './pages/main/info/info.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SkillsComponent } from './pages/main/skills/skills.component';
     MainComponent,
     ProjectsListComponent,
     SkillsComponent,
+    InfoComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule],
   providers: [],
