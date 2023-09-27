@@ -3,7 +3,17 @@
     <div class="footer__wrapper">
       <div class="footer__logo">
         <app-logo [color]="logoColor"></app-logo>
-        <p>ⓒ 2022 Hanna Mamedova</p>
+        <div class="flex-wrapper wrap" id="contacts">
+          <p>ⓒ 2023 Hanna Mamedova</p>
+          <div class="flex-wrapper">
+            <mat-icon> email</mat-icon>
+            <div><a href="mailto:hanna.kuzich@gmail.com">hanna.kuzich@gmail.com</a></div>
+          </div>
+          <div class="flex-wrapper">
+            <mat-icon> phone</mat-icon>
+            <div><a href="tel:+48 575 242 764">+48 575 242 764</a></div>
+          </div>
+        </div>
       </div>
       <div class="footer__links">
         <app-linkedin></app-linkedin>

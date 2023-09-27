@@ -17,6 +17,7 @@ import { MaterialModule } from './shared/material.module';
 import { ProjectsListComponent } from './pages/main/projects/projects-list/projects-list.component';
 import { SkillsComponent } from './pages/main/skills/skills.component';
 import { InfoComponent } from './pages/main/info/info.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,13 @@ import { InfoComponent } from './pages/main/info/info.component';
     SkillsComponent,
     InfoComponent,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    MaterialModule,
+    MatIconModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
