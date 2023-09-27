@@ -1,16 +1,21 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { Color } from 'src/app/shared/helpers';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  @Input() color: string
+  @Input() color: string;
+  logoColor: string = Color.white;
 
-  constructor(private router: Router, private viewportScroller: ViewportScroller) { }
+  constructor(
+    private router: Router,
+    private viewportScroller: ViewportScroller,
+  ) {}
 
   redirectTo(anchor: string) {
     this.router.navigateByUrl('/main').then(() => {

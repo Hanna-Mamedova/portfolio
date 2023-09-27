@@ -18,6 +18,7 @@ import { ProjectsListComponent } from './pages/main/projects/projects-list/proje
 import { SkillsComponent } from './pages/main/skills/skills.component';
 import { InfoComponent } from './pages/main/info/info.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { MatIconModule } from '@angular/material/icon';
     AppRoutingModule,
     MaterialModule,
     MatIconModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

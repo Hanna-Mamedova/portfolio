@@ -14,12 +14,14 @@
   justify-content: center;
   padding-bottom: 10rem;
   max-width: 55%;
+  z-index: 100;
 }
 
 .about__image {
   position: absolute;
   bottom: -167px;
   right: 0;
+  z-index: 0;
 }
 
 @keyframes textclip {
