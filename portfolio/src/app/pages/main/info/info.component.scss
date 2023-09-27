@@ -23,6 +23,11 @@
   text-align: justify;
 }
 
+button a {
+  color: white;
+  text-decoration: none;
+}
+
 @media only screen and (max-device-width: 900px) {
   .parallax {
     background-attachment: scroll;
