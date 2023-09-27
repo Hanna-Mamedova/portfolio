@@ -16,6 +16,11 @@
   align-items: center;
   gap: 1.5rem;
   color: #FFFF;
+  flex-wrap: wrap;
+
+  @media (max-width: 800px) {
+    gap: .5rem;
+  }
 }
 
 .footer__links {

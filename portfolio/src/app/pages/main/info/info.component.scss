@@ -7,6 +7,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 80px;
+
+  @media (max-width: 800px) {
+    padding-top: 60px;
+  }
 }
 
 .info__content {

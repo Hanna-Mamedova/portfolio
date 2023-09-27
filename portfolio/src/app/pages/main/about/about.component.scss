@@ -52,3 +52,40 @@
   margin-bottom: 1.5rem;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+@media (max-width: 800px) {
+  .about__wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .about__image {
+    position: static;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 60%;
+    }
+  }
+
+  .about__description {
+    max-width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .about__button {
+    display: flex;
+    justify-content: center;
+  }
+
+}
