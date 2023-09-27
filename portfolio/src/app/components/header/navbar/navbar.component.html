@@ -1,5 +1,6 @@
 <nav>
-  <button [ngStyle]="{'color': color}" class="nav-item">About me</button>
+  <button [ngStyle]="{'color': color}" class="nav-item" (click)="redirectTo('about')">About me</button>
+  <button [ngStyle]="{'color': color}" class="nav-item" (click)="redirectTo('skills')">Skills</button>
   <button [ngStyle]="{'color': color}" class="nav-item" (click)="redirectTo('projects')">Projects</button>
   <button [ngStyle]="{'color': color}" class="nav-item">Contacts</button>
 </nav>

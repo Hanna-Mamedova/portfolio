@@ -15,7 +15,7 @@ import { MainComponent } from './pages/main/main.component';
 import { ProjectsComponent } from './pages/main/projects/projects.component';
 import { MaterialModule } from './shared/material.module';
 import { ProjectsListComponent } from './pages/main/projects/projects-list/projects-list.component';
-
+import { SkillsComponent } from './pages/main/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -30,14 +30,10 @@ import { ProjectsListComponent } from './pages/main/projects/projects-list/proje
     GithubComponent,
     MainComponent,
     ProjectsListComponent,
+    SkillsComponent,
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    MaterialModule,
-  ],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, MaterialModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

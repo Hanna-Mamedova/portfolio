@@ -1,0 +1,23 @@
+<section id="skills" class="skills">
+  <div class="content">
+    <div class="content__container">
+      <h2>Skills</h2>
+      <div class="marquee">
+        <div class="marquee__group">
+          <a *ngFor="let item of items">
+            <div class="marquee-img">
+              <img [src]="item.src" [alt]="item.name">
+            </div>
+          </a>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <a *ngFor="let item of items">
+            <div class="marquee-img">
+              <img [src]="item.src" [alt]="item.name">
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
