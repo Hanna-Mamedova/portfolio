@@ -1,3 +1,14 @@
+.info {
+  background-image: url("/assets/background.jpg");
+  height: 100%;
+  min-height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 80px;
+}
+
 .info__content {
   display: flex;
   flex-direction: column;
@@ -10,4 +21,10 @@
 
 .justify {
   text-align: justify;
+}
+
+@media only screen and (max-device-width: 900px) {
+  .parallax {
+    background-attachment: scroll;
+  }
 }
